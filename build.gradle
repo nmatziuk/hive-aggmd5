@@ -1,0 +1,29 @@
+import org.gradle.internal.os.OperatingSystem;
+apply plugin: 'java'
+apply plugin: 'eclipse'
+version="1.0.0"
+group = 'com.nick.hiveutils'
+
+repositories {
+	maven {
+    	url = "http://repo.hortonworks.com/content/repositories/releases/"
+	}
+	maven {
+		url = "http://repo.hortonworks.com/content/repositories/jetty-hadoop/"
+	}
+	maven {
+		url = "http://repo.spring.io/plugins-release/"
+	}
+    jcenter()
+ 	mavenCentral()
+}
+
+dependencies {
+    compile 'org.apache.hadoop:hadoop-client:2.7.1.2.3.4.7-4'
+    compile 'org.apache.hive:hive-serde:1.2.1.2.3.4.7-4'
+    compile 'org.apache.hive:hive-exec:1.2.1000.2.4.2.0-258'
+    compile 'org.apache.hive:hive-jdbc:1.2.1.2.3.4.7-4'
+	compile 'commons-dbutils:commons-dbutils:1.2'
+    // Use JUnit test framework
+    compile 'junit:junit:4.12'
+}

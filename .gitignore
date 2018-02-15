@@ -1,0 +1,13 @@
+/.gradle/
+/gradle/
+*.class
+*.jar
+/build/
+/target/
+/.settings/
+.classpath
+.project
+/bin/
+/gradle/wrapper/
+/ears/
+
